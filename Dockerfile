@@ -1,7 +1,5 @@
-FROM php:8.2-cli
+FROM php:8.2-apache
 
-WORKDIR /app
+RUN docker-php-ext-install pdo pdo_pgsql
 
-COPY . .
-
-CMD php -S 0.0.0.0:$PORT
+COPY . /var/www/html
