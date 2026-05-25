@@ -1,0 +1,5 @@
+services:
+  - type: web
+    name: mi-app-cloud
+    env: docker
+    plan: free
